@@ -186,7 +186,7 @@ in two keystrokes.</p>
 <h2>What it does</h2>
 <table><thead><tr><th>Feature</th><th>Detail</th></tr></thead><tbody>
 <tr><td>AWS accounts</td><td>Console tabs separate by account, each in its own colour, so Production and Staging never share a group</td></tr>
-<tr><td>Google documents</td><td>Docs, Sheets, Slides, Forms, Drawings, Drive, Sites and Apps Script each get their own group</td></tr>
+<tr><td>Google Workspace</td><td>Tabs separate by document type rather than piling into one group</td></tr>
 <tr><td>Jira and Confluence</td><td>One Atlassian site splits in two; two different sites never merge</td></tr>
 <tr><td>Duplicate tabs</td><td>The new tab stays, the stale one closes — and pinned tabs, tabs playing audio and tabs holding unsaved input are never closed</td></tr>
 <tr><td>Tab switcher</td><td>A numbered list of recent tabs, or type to search every open tab by title, URL or group</td></tr>
