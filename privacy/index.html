@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tabitat — privacy policy</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --brand: #0D9488; --brand-ink: #0B7F74; --brand-soft: rgba(13,148,136,.1);
+  --ground: #F4F6F8; --surface: #FFFFFF; --text: #16232B; --dim: #5A6B75;
+  --faint: #8A99A3; --edge: #E3E9ED;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #2DD4BF; --brand-ink: #5EEAD4; --brand-soft: rgba(45,212,191,.14);
+    --ground: #12181C; --surface: #1B2329; --text: #E8EEF1; --dim: #9FB0BA;
+    --faint: #7A8B96; --edge: #2A353D;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--text);
+       font: 16px/1.65 var(--font); }
+main { max-width: 760px; margin: 0 auto; padding: 32px 24px 72px; }
+header.bar { border-bottom: 1px solid var(--edge); background: var(--surface); }
+header.bar div { max-width: 760px; margin: 0 auto; padding: 14px 24px;
+                 display: flex; align-items: center; gap: 10px; }
+header.bar svg { width: 26px; height: 26px; }
+header.bar b { font-size: 16px; font-weight: 650; letter-spacing: -.01em; }
+header.bar nav { margin-left: auto; display: flex; gap: 14px; }
+header.bar a { color: var(--dim); text-decoration: none; font-size: 14px; font-weight: 550; }
+header.bar a:hover { color: var(--brand-ink); }
+h1 { font-size: 28px; letter-spacing: -.02em; margin: 8px 0 4px; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
+     color: var(--faint); margin: 36px 0 10px; }
+h3 { font-size: 17px; margin: 28px 0 8px; }
+p, li { color: var(--text); }
+em.date { color: var(--dim); font-style: normal; font-size: 14px; }
+a { color: var(--brand-ink); }
+code { font: 13px var(--mono); background: var(--brand-soft); color: var(--brand-ink);
+       padding: 1px 5px; border-radius: 5px; }
+pre { background: var(--surface); border: 1px solid var(--edge); border-radius: 10px;
+      padding: 14px 16px; overflow-x: auto; }
+pre code { background: none; color: var(--text); padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px;
+        display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--edge);
+         vertical-align: top; }
+th { color: var(--faint); font-weight: 650; font-size: 13px;
+     text-transform: uppercase; letter-spacing: .05em; }
+footer { border-top: 1px solid var(--edge); margin-top: 48px; padding-top: 18px;
+         color: var(--faint); font-size: 14px; }
+.lede { font-size: 18px; color: var(--dim); margin: 0 0 28px; }
+.cta { display: inline-block; background: var(--brand); color: #fff; font-weight: 600;
+       padding: 10px 18px; border-radius: 10px; text-decoration: none; margin-top: 8px; }
+</style></head>
+<body>
+<header class="bar"><div><svg viewBox="0 0 64 64" aria-hidden="true"><defs>
+<linearGradient id="g" gradientUnits="userSpaceOnUse" x1="6.5" y1="9" x2="56.5" y2="55">
+<stop offset="0" stop-color="#10B981"/><stop offset=".38" stop-color="#14B8A6"/>
+<stop offset=".72" stop-color="#06B6D4"/><stop offset="1" stop-color="#38BDF8"/>
+</linearGradient></defs>
+<rect x="20.5" y="14" width="38" height="34" rx="10" fill="#38BDF8" opacity=".45"/>
+<g fill="url(#g)"><path d="M13.5 28V13a4 4 0 0 1 8 0v15z"/><path d="M27.5 28V13a4 4 0 0 1 8 0v15z"/>
+<rect x="5.5" y="23" width="38" height="32" rx="10"/></g></svg><b>Tabitat</b><nav><a href="/privacy/" style='color:var(--brand-ink)'>Privacy</a></nav></div></header>
+<main>
+<h1>Tabitat privacy policy</h1>
+<p><em class="date">Last updated: 25 September 2026</em></p>
+<p><strong>Tabitat collects no data unless you switch it on.</strong> There is no crash reporting, no advertising, no third-party code and no tracking of any kind. The one optional exception is anonymous usage statistics, described below: it is off by default, and turning it on takes a deliberate action plus a permission grant.</p>
+<h2>What Tabitat reads</h2>
+<p>To group tabs and close duplicates, Tabitat reads the <strong>URL, title and tab-group membership</strong> of your open tabs. This happens entirely inside your browser, in memory, for as long as it takes to decide which group a tab belongs to or whether it duplicates another tab.</p>
+<p>If you switch on <strong>&quot;Never close a tab with unsaved form input&quot;</strong> and grant site access, a small script watches for typing on pages you visit. It reports exactly one true/false signal per frame — <em>&quot;this frame has unsaved input&quot;</em>. It never reads, stores or transmits what you typed.</p>
+<p>If you switch on <strong>AWS account grouping</strong> and grant cookie access, Tabitat reads the <code>aws-userInfo</code> cookie on <code>aws.amazon.com</code> to learn which AWS account a console tab belongs to. The cookie is parsed locally and never leaves your browser.</p>
+<h2>What Tabitat stores</h2>
+<p>All storage is Chrome&#x27;s local extension storage, on your own machine:</p>
+<table><thead><tr><th>Stored</th><th>Where</th><th>Contains</th></tr></thead><tbody><tr><td>Your settings</td><td><code>chrome.storage.local</code></td><td>The toggles and lists you set on the options page</td></tr><tr><td>Recently-closed duplicates</td><td><code>chrome.storage.local</code></td><td>Up to 20 URLs, so the popup can offer &quot;Reopen&quot;. Turn the setting off and nothing is recorded; &quot;Clear the reopen list&quot; erases it</td></tr><tr><td>Recent tab order</td><td><code>chrome.storage.session</code></td><td>Tab <strong>ids</strong> only, never URLs. Cleared when you close the browser</td></tr><tr><td>Unsaved-input flags</td><td><code>chrome.storage.session</code></td><td>Tab and frame ids only. Cleared when you close the browser</td></tr><tr><td>Statistics opt-in</td><td><code>chrome.storage.local</code></td><td>Whether you opted in, and the random install id. Deleted when you opt out</td></tr></tbody></table>
+<p>Uninstalling Tabitat deletes all of it. None of it is synced, backed up, or readable by anyone but you.</p>
+<h2>Anonymous usage statistics (optional, off by default)</h2>
+<p>If you tick <strong>&quot;Help improve Tabitat with anonymous usage statistics&quot;</strong> on the options page and grant the permission Chrome then asks for, Tabitat sends a small event to Google Analytics when you use a feature. It sends <strong>only</strong> the events in this table, and only the values listed:</p>
+<table><thead><tr><th>Event</th><th>Carries</th></tr></thead><tbody><tr><td><code>switcher_opened</code></td><td>Whether it was opened by shortcut or toolbar</td></tr><tr><td><code>switcher_search</code></td><td>How many tabs matched, rounded to a band: <code>0</code>, <code>1</code>, <code>2-4</code>, <code>5-9</code>, <code>10+</code></td></tr><tr><td><code>tab_switched</code></td><td>Whether you picked with a digit, enter, a click, or the previous-tab shortcut</td></tr><tr><td><code>duplicate_closed</code></td><td>Your match mode (<code>smart</code> / <code>strict</code> / <code>path</code>), and whether a tab closed or you were switched to one</td></tr><tr><td><code>group_created</code></td><td>Which rule fired: <code>aws</code>, <code>google</code>, <code>atlassian</code>, <code>domain</code> or <code>subdomain</code></td></tr></tbody></table>
+<p>It <strong>never</strong> sends a URL, a hostname, a page or tab title, an AWS account id or alias, anything you type into the search box, or anything from a form. This is enforced in code, not by convention: <code>lib/analytics.js</code> defines the complete set of events and permitted values, and anything not on that list is discarded before a request is built. <code>test/analytics.test.mjs</code> proves it, including the case where a URL is passed by mistake.</p>
+<p>A random identifier, generated on your machine with <code>crypto.randomUUID()</code>, distinguishes one install from another so that ten events from you are not counted as ten users. It is tied to nothing about you, your Google account, or your device. <strong>Switching the setting off deletes it</strong> and revokes the permission — it does not merely stop sending.</p>
+<p>If this build ships without a configured analytics endpoint, the setting is inert and nothing is sent whether it is on or off; the options page says so when that is the case.</p>
+<h2>Network requests</h2>
+<p>Tabitat makes exactly one request that looks like network I/O:</p>
+<pre><code>chrome-extension://&lt;your-install-id&gt;/_favicon/?pageUrl=…</code></pre>
+<p>This is the extension&#x27;s <strong>own origin</strong>, serving Chrome&#x27;s local favicon cache through the <code>favicon</code> permission. It is used to pick a group colour that matches the site. It does not leave your machine.</p>
+<p>The extension&#x27;s content security policy is <code>connect-src &#x27;self&#x27; https://www.google-analytics.com</code>. Those are the only two destinations the browser will permit — everything else is blocked at the browser level, not as a promise but as an enforced rule. The Google Analytics origin is reachable only after you opt in, because the host permission for it is optional and requested at that moment.</p>
+<h2>Permissions, and why each exists</h2>
+<table><thead><tr><th>Permission</th><th>Why</th></tr></thead><tbody><tr><td><code>tabs</code></td><td>Read tab URLs and titles to decide grouping and detect duplicates</td></tr><tr><td><code>tabGroups</code></td><td>Create, name, colour and collapse Chrome tab groups</td></tr><tr><td><code>storage</code></td><td>Save your settings and the recent-tab order on this machine</td></tr><tr><td><code>favicon</code></td><td>Read Chrome&#x27;s local favicon cache to choose a group colour</td></tr><tr><td><code>scripting</code></td><td>Register the unsaved-input watcher, only after you enable it</td></tr><tr><td><code>cookies</code> (optional)</td><td>Read the AWS console session cookie, only if you enable AWS grouping and grant it</td></tr><tr><td>Site access (optional)</td><td>Run the unsaved-input watcher, only if you enable that setting and grant it</td></tr><tr><td><code>www.google-analytics.com</code> (optional)</td><td>Send the anonymous events above, only if you opt in</td></tr></tbody></table>
+<p>Every optional permission is off by default, requested at the moment you turn its feature on, and revocable from the options page or <code>chrome://extensions</code>.</p>
+<h2>Changes</h2>
+<p>Any change to this policy will be published in this file, with the date above updated, before the version that relies on it ships.</p>
+<h2>Contact</h2>
+<p>Email &lt;support@pareshpatil.in&gt;.</p>
+<footer>&copy; 2026 Paresh V Patil &middot; <a href="mailto:support@pareshpatil.in">support@pareshpatil.in</a></footer>
+</main></body></html>
