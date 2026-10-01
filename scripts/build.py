@@ -22,6 +22,12 @@ DOCS = ROOT
 DOMAIN = 'tabitat.pareshpatil.in'
 SUPPORT = 'support@pareshpatil.in'
 
+# Google Search Console proves ownership by finding this tag on the site root.
+# It lives here rather than in index.html because index.html is generated — a
+# tag pasted into the output survives exactly until the next build, and the
+# failure is silent: verification lapses and nobody notices.
+GOOGLE_VERIFICATION = 'A4Yy-S7lsNlATF4fwgxRGWlkLEkgJgw2Vg_ZkQSCdvE'
+
 STYLE = """
 :root {
   color-scheme: light dark;
@@ -149,13 +155,15 @@ def render(md):
     return '\n'.join(html)
 
 
-def page(title, body, nav_here):
+def page(title, body, nav_here, verify=False):
     nav = ''.join(
         f'<a href="{href}"{" style=\'color:var(--brand-ink)\'" if label == nav_here else ""}>{label}</a>'
         for label, href in (('Privacy', '/privacy/'),))
+    verification = (f'\n<meta name="google-site-verification" content="{GOOGLE_VERIFICATION}" />'
+                    if verify and GOOGLE_VERIFICATION else '')
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />{verification}
 <title>{H.escape(title)}</title>
 <style>{STYLE}</style></head>
 <body>
@@ -204,7 +212,7 @@ and every permission that could be sensitive is optional and off by default. The
 <h2>Support</h2>
 <p>Questions, bug reports and feature requests: <a href="mailto:%s">%s</a></p>
 """ % (SUPPORT, SUPPORT)
-    (DOCS / 'index.html').write_text(page('Tabitat — automatic tab groups for Chrome', landing, None))
+    (DOCS / 'index.html').write_text(page('Tabitat — automatic tab groups for Chrome', landing, None, verify=True))
 
     for name in ('CNAME', '.nojekyll', 'index.html', 'privacy/index.html'):
         f = DOCS / name
