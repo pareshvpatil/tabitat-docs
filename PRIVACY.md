@@ -29,8 +29,9 @@ All storage is Chrome's local extension storage, on your own machine:
 |---|---|---|
 | Your settings | `chrome.storage.local` | The toggles and lists you set on the options page |
 | Recently-closed duplicates | `chrome.storage.local` | Up to 20 URLs, so the popup can offer "Reopen". Turn the setting off and nothing is recorded; "Clear the reopen list" erases it |
-| Recent tab order | `chrome.storage.session` | Tab **ids** only, never URLs. Cleared when you close the browser |
+| Recent tab order | `chrome.storage.local` | Tab **ids** only, never URLs. Cleared the next time the browser starts, so it never outlives a session — it survives an extension update so that installing one does not empty your switcher |
 | Unsaved-input flags | `chrome.storage.session` | Tab and frame ids only. Cleared when you close the browser |
+| AWS account per tab | `chrome.storage.local` | Only if you enable AWS grouping and grant cookie access: the account id and alias already shown in your own console, against a tab id, so a group keeps its name. Cleared the next time the browser starts, and immediately if you revoke cookie access |
 | Statistics opt-in | `chrome.storage.local` | Whether you opted in, and the random install id. Deleted when you opt out |
 
 Uninstalling Tabitat deletes all of it. None of it is synced, backed up, or readable by anyone
